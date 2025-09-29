@@ -1,0 +1,23 @@
+name: qsim-env
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - cmake                    # sistema de build cross-platform
+  - ninja                    # build rápido (opcional)
+  - pkg-config               # detect libs
+  - python=3.11              # opcional, para usar scripts de controle (pybind11, testing)
+  - pybind11                 # para expor a engine C++ ao Python
+  - eigen                    # álgebra linear header-only (Eigen)
+  - armadillo                # alternativa para álgebra linear (usa BLAS/LAPACK)
+  - openblas                 # BLAS/LAPACK (fallback multiplataforma)
+  - openmpi                  # MPI (distribuído) - conda-forge builds multiplataforma
+  - openmp                   # meta-package para suporte a OpenMP (se disponível)
+  - libstdcxx-ng             # runtime C++ (compatibilidade)
+  - catch2                   # framework de testes (opcional)
+  - fmt                      # formatação (útil em C++)
+  - pkg-config               # (mantido) utilitário de detecção de libs
+  - pip
+  - pip:
+    - nvidia-ml-py3          # (exemplo) acesso a info GPU via pip, opcional

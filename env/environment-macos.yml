@@ -1,0 +1,5 @@
+dependencies:
+  - clangdev
+  - openblas
+  - pip:
+    - mac-only-pip-package

@@ -1,0 +1,9 @@
+dependencies:
+  - make
+  - gcc_linux-64
+  - gxx_linux-64
+  - gfortran_linux-64
+  - cudatoolkit=12.1     # só se for usar CUDA no Linux
+  - nccl
+  - pip:
+    - linux-only-pip-package

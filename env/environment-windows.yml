@@ -1,0 +1,6 @@
+dependencies:
+  - vs2019_win-64
+  - vs2015_runtime
+  - m2-msys2-runtime     # se for usar toolchain msys2/mingw
+  - pip:
+    - windows-only-pip-package

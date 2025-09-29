@@ -1,0 +1,11 @@
+{
+    "python.defaultInterpreterPath": "${env:HOME}/miniforge/envs/qsim-env/bin/python",
+    "python.condaPath": "${env:HOME}/miniforge/bin/conda",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.extraPaths": [
+      "${workspaceFolder}/src",
+    ],
+    "python.languageServer": "Pylance",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json"
+  }
+  
