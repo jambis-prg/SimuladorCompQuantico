@@ -6,21 +6,16 @@
 
 #include <chrono>
 
-#include <Eigen/Dense>
-#include <complex>
-
-using complex_f64 = std::complex<double>;
+#include "operators_bases.h"
 
 int main() 
 {
-  Eigen::Vector2cd v(complex_f64(0, 0), complex_f64(1, 0));
+  SimQ::QBit q1 = SimQ::QBases::KetZero;
+  SimQ::QBit q2 = SimQ::QBases::KetZero;
 
-  std::cout << v << '\n';
+  q1 = SimQ::QOps::H * q1;
 
-  Eigen::Matrix2cd m;
-  m << complex_f64(1, 0), complex_f64(1, 0), complex_f64(1, 0), complex_f64(-1, 0);
+  auto qbitsTensor = SimQ::KroneckerProduct(q1, q2);
 
-  std::cout << m << '\n';
-
-  std::cout << sqrt(2) * m * v << '\n';
+  std::cout << SimQ::QOps::CNOT * qbitsTensor << '\n';
 }
